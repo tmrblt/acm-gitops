@@ -17,12 +17,12 @@ metadata:
   finalizers:
   - kubevirt.io/virtualMachineControllerFinalize
   labels:
-    app: fedora-strong-worm
+    app: fedora-strong-wormx
     vm.kubevirt.io/template: fedora-server-small
     vm.kubevirt.io/template.namespace: openshift
     vm.kubevirt.io/template.revision: "1"
     vm.kubevirt.io/template.version: v0.26.0
-  name: fedora-strong-worm
+  name: fedora-strong-wormx
   namespace: demo-vm-dr-6
 spec:
   dataVolumeTemplates:
@@ -30,7 +30,7 @@ spec:
     kind: DataVolume
     metadata:
       creationTimestamp: null
-      name: fedora-strong-worm
+      name: fedora-strong-wormx
     spec:
       source:
         pvc:
@@ -49,7 +49,7 @@ spec:
         vm.kubevirt.io/workload: server
       creationTimestamp: null
       labels:
-        kubevirt.io/domain: fedora-strong-worm
+        kubevirt.io/domain: fedora-strong-wormx
         kubevirt.io/size: small
     spec:
       accessCredentials:
@@ -98,7 +98,7 @@ spec:
       terminationGracePeriodSeconds: 180
       volumes:
       - dataVolume:
-          name: fedora-strong-worm
+          name: fedora-strong-wormx
         name: rootdisk
       - cloudInitConfigDrive:
           userData: |
