@@ -23,7 +23,7 @@ metadata:
     vm.kubevirt.io/template.revision: "1"
     vm.kubevirt.io/template.version: v0.26.0
   name: fedora-strong-worm
-  namespace: demo-vm-dr
+  namespace: demo-vm-dr-2
 spec:
   dataVolumeTemplates:
   - apiVersion: cdi.kubevirt.io/v1beta1
@@ -34,8 +34,8 @@ spec:
     spec:
       source:
         pvc:
-          name: fedora-previous-lizard
-          namespace: demo-vm-dr
+          name: fedora-premier-stingray
+          namespace: demo-vm-dr-2
       storage:
         resources:
           requests:
