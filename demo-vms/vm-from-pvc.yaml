@@ -35,7 +35,7 @@ spec:
       source:
         pvc:
           name: fedora-previous-lizard
-          namespace: demo-cnv
+          namespace: demo-vm-dr
       storage:
         resources:
           requests:
