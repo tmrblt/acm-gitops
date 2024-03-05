@@ -23,7 +23,7 @@ metadata:
     vm.kubevirt.io/template.revision: "1"
     vm.kubevirt.io/template.version: v0.26.0
   name: fedora-strong-lion
-  namespace: demo-dr
+  namespace: demo-test
 spec:
   dataVolumeTemplates:
   - apiVersion: cdi.kubevirt.io/v1beta1
@@ -35,7 +35,7 @@ spec:
       source:
         pvc:
           name: fedora-funny-cat
-          namespace: demo-dr
+          namespace: demo-test
       storage:
         resources:
           requests:
