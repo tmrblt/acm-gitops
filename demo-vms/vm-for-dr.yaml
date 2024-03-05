@@ -35,7 +35,7 @@ spec:
       source:
         pvc:
           name: fedora-funny-cat
-          namespace: demo-test
+          namespace: demo-disaster-recovery
       storage:
         resources:
           requests:
