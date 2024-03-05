@@ -23,7 +23,7 @@ metadata:
     vm.kubevirt.io/template.revision: "1"
     vm.kubevirt.io/template.version: v0.26.0
   name: fedora-strong-tiger3
-  namespace: demo-disaster-recovery-1
+  namespace: demo-cnv-dr-1
 spec:
   dataVolumeTemplates:
   - apiVersion: cdi.kubevirt.io/v1beta1
@@ -34,8 +34,8 @@ spec:
     spec:
       source:
         pvc:
-          name: fedora-registered-bee
-          namespace: demo-disaster-recovery-1
+          name: fedora-xenophobic-limpet
+          namespace: demo-cnv-dr-1
       storage:
         resources:
           requests:
