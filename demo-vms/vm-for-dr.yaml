@@ -17,25 +17,25 @@ metadata:
   finalizers:
   - kubevirt.io/virtualMachineControllerFinalize
   labels:
-    app: fedora-strong-lion
+    app: fedora-strong-tiger
     vm.kubevirt.io/template: fedora-server-small
     vm.kubevirt.io/template.namespace: openshift
     vm.kubevirt.io/template.revision: "1"
     vm.kubevirt.io/template.version: v0.26.0
-  name: fedora-strong-lion
-  namespace: demo-disaster-recovery
+  name: fedora-strong-tiger
+  namespace: demo-disaster-recovery-1
 spec:
   dataVolumeTemplates:
   - apiVersion: cdi.kubevirt.io/v1beta1
     kind: DataVolume
     metadata:
       creationTimestamp: null
-      name: fedora-strong-lion
+      name: fedora-strong-tiger
     spec:
       source:
         pvc:
-          name: fedora-funny-cat
-          namespace: demo-storage-basics
+          name: fedora-registered-bee
+          namespace: demo-disaster-recovery-1
       storage:
         resources:
           requests:
@@ -49,7 +49,7 @@ spec:
         vm.kubevirt.io/workload: server
       creationTimestamp: null
       labels:
-        kubevirt.io/domain: fedora-strong-lion
+        kubevirt.io/domain: fedora-strong-tiger
         kubevirt.io/size: small
     spec:
       architecture: amd64
@@ -91,7 +91,7 @@ spec:
       terminationGracePeriodSeconds: 180
       volumes:
       - dataVolume:
-          name: fedora-strong-lion
+          name: fedora-strong-tiger
         name: rootdisk
       - cloudInitConfigDrive:
           userData: |
