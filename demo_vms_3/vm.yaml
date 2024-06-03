@@ -23,7 +23,7 @@ metadata:
     vm.kubevirt.io/template.revision: "1"
     vm.kubevirt.io/template.version: v0.26.0
   name: demo-vm-test-3
-  namespace: demo-vm-dr-1
+  namespace: demo-vm-dr-3
 spec:
   dataVolumeTemplates:
   - apiVersion: cdi.kubevirt.io/v1beta1
