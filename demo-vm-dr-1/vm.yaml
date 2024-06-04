@@ -52,13 +52,6 @@ spec:
         kubevirt.io/domain: centos-base
         kubevirt.io/size: small
     spec:
-      accessCredentials:
-        - sshPublicKey:
-            propagationMethod:
-              noCloud: {}
-            source:
-              secret:
-                secretName: ssh-pubkey-tamer
       architecture: amd64
       domain:
         cpu:
